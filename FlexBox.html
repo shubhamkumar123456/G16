@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 400px;
+            width: 800px;
+            background-color: aqua;
+            display: flex;
+            /* gap:20px; */
+            flex-direction: row;
+            /* if flex direction is row .justify content will work in horizontal direction (width wise) */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            /* justify-content: space-evenly; */
+            /* justify-content: center; */
+            /* justify-content: end; */
+            /* justify-content: start; */
+
+            /* align-items: center; */
+            /* align-items: end; */
+            /* align-items: start; */
+
+            justify-content: center;
+            align-items: center;
+            /* all child will arrange in row direction */
+
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="box1"></div>
+
+         <div class="box2"></div>
+
+        <div class="box3"></div>
+    </div>
+
+    
+</body>
+</html>
