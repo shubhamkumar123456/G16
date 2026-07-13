@@ -15,7 +15,7 @@
             height: 100vh;
             width: 100%;
             /* background-color: black; */
-            background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/2cc1a632c8c5511c86638369/jhhhhhh.jpg);
+            background-image:linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/2cc1a632c8c5511c86638369/jhhhhhh.jpg);
             display: flex;
             padding: 40px;
             gap: 20px;
@@ -26,14 +26,17 @@
             justify-content: center;
         }
         .left{
-            width: 30%;
+            width: 35%;
             height: 60%;
             color: white;
+            font-size: 20px;
             /* background-color: brown; */
         }
         .right{
-            width: 50%;
+            width: 40%;
             height: 60%;
+            color: white;
+            font-weight: bolder;
             /* background-color: yellow; */
         }
 
@@ -48,6 +51,7 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            font-size: 25px;
         }
 
         .rightTop{
@@ -55,35 +59,48 @@
             gap: 20px;
         }
 
-        input{
+        input, textarea{
             border: none;
-            border-bottom: 1px solid;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+            margin-bottom: 30px;
+            outline: none;
+            padding: 10px;
+            color: white;
+            margin-top: 15px;
         }
 
         button{
             width: 100%;
-            padding: 5px;
+            padding: 20px;
             border-radius: 30px;
             background-color: orange;
             border: none;
+            color: white;
+
         }
 
         button:hover{
             background-color: white;
             color: black;
         }
+
+        .mb{
+            margin-bottom: 25px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <h1 style="font-size: 80px;">Contact Us</h1>
-            <p>Images from  freepik</p>
+            <h1 class="mb" style="font-size: 40px; font-weight: bolder;">CONTACT US</h1>
+            <!-- <h1>Contact Us</h1> -->
+            <p class="mb">Images from  freepik</p>
 
-            <div class="box">
-                <div class="top">
+            <div class="box mb">
+                <div class="top mb">
                     <div class="topLeft">
-                        <i class="bi bi-telephone-fill"></i>
+                        <i style="color: rgb(255, 191, 0);" class="bi bi-telephone-fill"></i>
                     </div>
                     <div class="topRight">
                         <h3>Call Us</h3>
@@ -91,10 +108,10 @@
                 </div>
                 <p>1 (234) 567-891, 1 (234) 987-654</p>
             </div>
-            <div class="box">
-                <div class="top">
+            <div class="box mb">
+                <div class="top mb">
                     <div class="topLeft">
-                        <i class="bi bi-geo-alt-fill"></i>
+                        <i style="color: rgb(255, 191, 0);" class="bi bi-geo-alt-fill"></i>
                     </div>
                     <div class="topRight">
                         <h3>Location</h3>
@@ -102,10 +119,10 @@
                 </div>
                 <p>121 Rock Sreet, 21 Avenue, New York, NY 92103-9000</p>
             </div>
-            <div class="box">
-                <div class="top">
+            <div class="box mb">
+                <div class="top mb">
                     <div class="topLeft">
-                        <i class="bi bi-stopwatch"></i>
+                        <i style="color: rgb(255, 191, 0);" class="bi bi-stopwatch"></i>
                     </div>
                     <div class="topRight">
                         <h3>Business Hours</h3>
@@ -116,20 +133,20 @@
         </div>
 
         <div class="right">
-            <div class="rightTop">
-                <div class="rightLeft">
+            <div  class="rightTop">
+                <div style="width: 50%;" class="rightLeft">
                     <p>Email</p>
-                    <input type="email">
+                    <input style="width: 100%;" placeholder="enter a valid email address" type="email">
                 </div>
-                <div class="rightRight">
+                <div style="width: 50%;" class="rightRight">
                     <p>Name</p>
-                    <input type="text">
+                    <input style="width: 100%;" placeholder="enter your name" type="text">
                 </div>
             </div>
              <p>Address</p>
-            <input style="width: 100%;" type="text">
+            <input placeholder="Enter your address" style="width: 100%;" type="text">
              <p>Message</p>
-            <textarea style="width: 100%;" name="" id=""></textarea>
+            <textarea placeholder="enter your message" style="width: 100%; height: 100px;" name="" id=""></textarea>
 
             <button>Submit</button>
         </div>
