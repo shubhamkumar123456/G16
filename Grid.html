@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            display: grid;
+            grid-template-rows: 100px  auto  100px ;
+            grid-template-columns: 1fr 4fr 1fr;
+            gap: 10px;
+        }
+
+        .box{
+            background-color: yellow;
+        }
+
+        .header{
+            grid-column: 1/4;
+        }
+
+        .foot{
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box header">Header</div>
+        <div class="box">Nav</div>
+        <div class="box">Article</div>
+        <div class="box">Ads</div>
+        <div class="box foot">Footer</div>
+    </div>
+</body>
+</html>
