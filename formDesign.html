@@ -14,26 +14,33 @@
         .container{
             height: 100vh;
             width: 100%;
-            background-color: black;
+            /* background-color: black; */
+            background-image: url(https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/2cc1a632c8c5511c86638369/jhhhhhh.jpg);
             display: flex;
             padding: 40px;
+            gap: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
         
+            align-items: center;
+            justify-content: center;
         }
         .left{
-            width: 40%;
-            height: 100%;
-            background-color: brown;
+            width: 30%;
+            height: 60%;
+            color: white;
+            /* background-color: brown; */
         }
         .right{
-            width: 60%;
-            height: 100%;
-            background-color: yellow;
+            width: 50%;
+            height: 60%;
+            /* background-color: yellow; */
         }
 
         .box{
             width: 300px;
             /* height: 100px; */
-            background-color: aqua;
+            /* background-color: aqua; */
             margin-bottom: 20px;
         }
 
@@ -42,12 +49,35 @@
             gap: 10px;
             align-items: center;
         }
+
+        .rightTop{
+            display: flex;
+            gap: 20px;
+        }
+
+        input{
+            border: none;
+            border-bottom: 1px solid;
+        }
+
+        button{
+            width: 100%;
+            padding: 5px;
+            border-radius: 30px;
+            background-color: orange;
+            border: none;
+        }
+
+        button:hover{
+            background-color: white;
+            color: black;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <h1>Contact Us</h1>
+            <h1 style="font-size: 80px;">Contact Us</h1>
             <p>Images from  freepik</p>
 
             <div class="box">
@@ -84,8 +114,25 @@
                 <p>Mon – Fri …… 10 am – 8 pm, Sat, Sun ....… Closed</p>
             </div>
         </div>
-        
-        <div class="right"></div>
+
+        <div class="right">
+            <div class="rightTop">
+                <div class="rightLeft">
+                    <p>Email</p>
+                    <input type="email">
+                </div>
+                <div class="rightRight">
+                    <p>Name</p>
+                    <input type="text">
+                </div>
+            </div>
+             <p>Address</p>
+            <input style="width: 100%;" type="text">
+             <p>Message</p>
+            <textarea style="width: 100%;" name="" id=""></textarea>
+
+            <button>Submit</button>
+        </div>
     </div>
 
     <!-- https://meet.google.com/euj-ytjg-nrv -->
