@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montenegrin+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            /* background-color: black; */
+            /* background-image: linear-gradient(red, yellow, green,); */
+            background-image:linear-gradient(rgb(0, 0, 0,0.4), rgb(0, 0, 0,0.4)) ,url(https://assets.nicepagecdn.com/d2cc3eaa/3266805/images/uyy.jpg);
+            background-image: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .xyz{
+            width: 80% ;
+            height: 50%;
+            /* background-color: aqua; */
+            display: flex;
+            gap: 10px;
+        }
+        .box{
+            height: 100%;
+            width: 33%;
+            background-color: white;
+            border-radius: 20px;
+            color: black;
+        }
+
+        #heading{
+           font-family: "Montenegrin Gothic One", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .wrapper{
+            width: 100%;
+            height: 150vh;
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            gap: 20px;
+            padding:100px ;
+            
+        }
+        .box1{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading" style="font-size: 80px;">Sweets</h1>
+
+        <div class="xyz">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+            <div class="box1">1</div>
+            <div class="box1">2</div>
+            <div class="box1">3</div>
+            <div class="box1">4</div>
+            <div class="box1">5</div>
+            <div class="box1">6</div>
+    </div>
+</body>
+</html>
