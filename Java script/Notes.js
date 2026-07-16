@@ -11,6 +11,7 @@
 // Variable
 // Datatypes  --> Primitive , Non Primitive
 // String and its method
+// loops --> for , while, do while
 // Array and its methods
 // Object and its methos
 // function
@@ -88,4 +89,19 @@
         // Null -->  it is a user defined value that is equal to nothing;
 
             let name = null //
+
+
+
+// b) Non primitive Datatype --> can store collection of Data --> 
+// example --> array , object
+
+// array --> can store collection of data in indexing form
+        let arr = [10, 20, 50, "hello", true];
+        console.log(arr)
+// access any value --> using index
+console.log(arr[0] ) // 10
+console.log(arr[1] ) // 20
+console.log(arr[2] ) // 50
+console.log(arr[3] ) // hello
+console.log(arr[4] ) // true
 
