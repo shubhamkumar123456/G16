@@ -221,7 +221,22 @@
 // arr.splice(1,1,true)
 // console.log(arr)
 
-// forEach , map method --> 
+
+// Loops example --> 
+// let arr = ["apple", "kiwi", "banana",true ,"john"];
+// method 1 -->
+// console.log(arr[0])
+// console.log(arr[1])
+// console.log(arr[2])
+// console.log(arr[3])
+// console.log(arr[4])
+
+// method 2 using loop --> for loop , while loop , do while loop
+//  for(let i=0; i<arr.length; i++){
+//         console.log(arr[i])
+//  }
+
+// forEach , map method , filter method --> 
 
 
 
