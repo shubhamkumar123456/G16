@@ -8,12 +8,12 @@
 // example --> Chrome has V8 engine, mozilla firefox has spider mokey
 
 // Topics -->
-// Variable
-// Datatypes  --> Primitive , Non Primitive
-// String and its method
-// loops --> for , while, do while
-// Array and its methods
-// Object and its methos
+// Variable --> done
+// Datatypes  --> Primitive , Non Primitive 
+// String and its method --> done
+// loops --> for , while, do while --> done
+// Array and its methods --> done
+// Object and its method --> done
 // function
 // call back functions
 // Promises
@@ -238,6 +238,129 @@
 
 // forEach , map method , filter method --> 
 
-
+// *****************************21-07-2026**********************
 
 // Object methods -->
+
+// let data = {
+//         name:"john",
+//         age:34
+// }
+
+// data.course = "fullstack"; //add new key value
+// data.age = 45;  //update any value
+// console.log(data)
+
+// Convert object into an String --> JSON.stringify() or JSON.parse()
+
+
+// let data ={
+//         name:"one",
+//         age:33,
+//         course:"fullstack"
+// }
+
+// let ans = JSON.stringify(data); //covert object into string 
+// console.log(ans)
+// console.log(typeof ans)
+// console.log(ans[0])
+
+// let ans2 = JSON.parse(ans)// convert string object into real object
+// console.log(ans2)
+
+
+// Functions --> functions are reusable piece of code design to perform a specific task . a function only runs when something invokes it (calls it)
+
+        // let a = 10;
+        // let b = 5;
+        // console.log(a+b);
+
+        // let c = 1;
+        // let d = 2;
+        // console.log(c+d)
+
+        // let e = 10;
+        // let f = 10;
+        // console.log(e+f)
+
+
+        // data recieved in function decleration is known as parameters. a and b  are parameters
+        
+        // example of normal function -->
+        // function sum(a , b){  //function decleration  
+        //         console.log(a+b)      
+        // }
+
+        // sum(10 ,5)  // function calling
+        // // data passed inside function calling is known as arguments
+        // sum(1,2);
+        // sum(11,21);
+
+
+// Arrow function (introduced in ES6 version) -->
+
+// let x = 10;
+// let y = "hello";
+
+// let z = function(){
+//         console.log("all good")
+// }
+// z();
+
+// // example of arraow function. in arrow function we do not use function key word we use arrows;
+// let print = ()=>{
+//         console.log("running")
+// }
+
+// print() //function calling
+
+
+// Callback function (important) -->  functions that are passed into another function as an argument are known as callback function
+
+// 
+// 
+// because it is passed as argument in  another function (two).
+
+//
+
+// console.log(one)
+// one()
+
+
+// Timer function --> setTimeOut , setInterval
+
+// syntax --> setTimeout(cb function , time in ms)
+
+// function run(){
+//         console.log("hello")
+// }
+
+// setTimeout(run, 3000);
+
+// setInterval(function(){
+//         console.log("all is well")
+// }  , 1000)
+
+
+// forEach , map method , filter method -->
+
+// a) forEach method --> used to iterate throuh an array
+
+// let arr = [10, 20, 30, 40, 50];
+
+// arr.forEach((val , i)=> {
+//         console.log(val)
+// })
+// map method --> used to traverse through an array and can also return a new array
+// 
+// let ans = arr.map((val , i)=> {
+//          return val+1
+// })
+
+// console.log(ans)
+
+
+// filter method --> 
+let arr = [10, 20, 30, 40, 50];
+let ans = arr.filter((val)=> val!= 40);
+console.log(ans)
