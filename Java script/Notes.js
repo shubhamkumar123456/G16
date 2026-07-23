@@ -361,6 +361,26 @@
 
 
 // filter method --> 
-let arr = [10, 20, 30, 40, 50];
-let ans = arr.filter((val)=> val!= 40);
-console.log(ans)
+// let arr = [10, 20, 30, 40, 50];
+// let ans = arr.filter((val)=> val!= 40);
+// console.log(ans)
+
+// find the name of products whose price is between 15 to 50 thousand including 15 and 50
+
+// let products = [
+//         {name:"iphone" , price:45000, rating:4.3}, //0
+//         {name:"samsung" , price:55000, rating:2.3},  //1
+//         {name:"x-box" , price:15000, rating:5}, //  2
+//         {name:"real me" , price:25000, rating:3.3}, //3
+//         {name:"MI" , price:10000, rating:4},  //4
+//         {name:"oppo" , price:95000, rating:3},  //5
+// ]
+
+// products.forEach((val, i)=>{
+//         // console.log(val)  // object
+// //        {name:"samsung" , price:55000, rating:2.3}
+//         if(val.price >=15000 && val.price <= 50000){
+//                 console.log(val.name)
+//         }
+// })
+

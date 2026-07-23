@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS selector  --> id , class , tagName */
+        p{
+
+        }
+
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <p onclick="print()" id="demo">Lorem ipsum dolor sit amet.</p>
+
+    <h1 name="one">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, exercitationem!</h1>
+
+    <div>
+        <label for="">Male</label>
+        <input name="a" type="radio">
+        <label for="">Female</label>
+        <input name="a" type="radio">
+    </div>
+
+    <ul class="ulList">
+        <li>Mango</li>
+        <li>apple</li>
+        <li>kiwi</li>
+    </ul>
+
+    <ul class="ulList">
+        <li>Mango</li>
+        <li>apple</li>
+        <li>kiwi</li>
+    </ul>
+
+    <div onmouseenter="changeColor1()"  onmouseout="changeColor2()"  onclick="changeColor3()" class="box"></div>
+
+    <script>
+        // DOM  -->  it is a tree like structure created by the browser. and with the help of DOM javascript gets all power it needs to create a dynamic web page
+
+
+//1) Get an element in Javascript --> 
+        // a) document.getElementById()  -->direct tag
+        // b) document.getElementByClassName() -->array[ tag , tag]
+        // c) document.getElementByTagName()  --> array [tag , tag]
+        // d) document.getElementByName() --> array[tage]
+        // e) document.querySelector() --> gives you single tag (first occurence)
+        // f) document.querySelectorAll()
+
+     // a) document.getElementById() --> 
+        // let x = document.getElementById('demo')
+        // console.log(x)  //<p>  <p>
+        // x.style.backgroundColor = "aqua"
+        // x.style.width = "400px"
+
+    // b) document.getElementByClassName()
+    
+    // let x = document.getElementsByClassName('ulList');
+    // console.log(x)  // [ul]
+    // console.log(x[0])  //ul;
+    // x[0].style.backgroundColor = "red"
+    // x[1].style.backgroundColor = "yellow"
+
+    // c) document.getElementByTagName()
+    // let x = document.getElementsByTagName('p') //
+    // console.log(x)
+    // console.log(x[0])
+    // x[0].style.backgroundColor = "orange"
+
+    // e) querySelector --> 
+    // let x = document.querySelector('.ulList')
+    // console.log(x)
+
+    // let x = document.querySelectorAll('.ulList')
+    // console.log(x)  // [ul , ul]
+
+    // for(let i= 0; i<x.length; i++){
+    //     console.log(x[i])
+    //     x[i].style.backgroundColor = "red"
+    // }
+
+    // console.log(x[0]) // ul
+    // console.log(x[0].children)  // [li , li , li]
+    // x[0].children[1].style.backgroundColor = "red"
+
+
+
+//2)  write inside any tag --> .innerHTML , .innerText , .textContent
+
+// let x = document.querySelector('#demo') // <p> <p>
+//     console.log(x)
+//     console.log(x.innerHTML)
+    // x.innerHTML = "hello how are you"
+    // x.innerText = "hello how are you"
+    // x.textContent = "hello how are you"
+
+
+//3) can set or get any attribute --> with the help of .(dot) u can access any attribute of tag
+// getAttribute or setAttribute
+// let x = document.querySelector('#demo') // <p> <p>
+//     x.className = "hello"
+//     console.log(x.id)
+//     // console.log(x.className)  //can set a classAttribute
+//     x.setAttribute('class', 'hello')  //can set a classAttribute
+//     console.log(x)
+
+
+//4)create a tag using Js --> document.createElement(tagName)
+
+// let x = document.createElement('img');
+// x.src = "https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_640.jpg"
+// console.log(x)
+// x.style.width = "250px"
+
+
+// Insert tag inside html -->
+// a) append method --> insert as a  last child
+// b) prepend method --> insert as a first child
+// c) before method --> insert before any tag 
+// c) after method --> insert after any tag
+
+// let headingTag = document.querySelector('h1');
+// console.log(headingTag);
+// headingTag.before(x)
+
+
+
+
+
+// Event --> events are the actions performed by the user and responded by the browser
+
+// how to write event --> inline event  and external event
+// a) inline event --> iside any opening tag using on , example --> onclick, onmouseEnter, onmouseOut, onmouseMove etc
+
+//b) external event --> using document.addEventListener('eventName' , cbFunction)
+
+
+
+// function print(){
+//     // console.log("hello i am text");
+//     let x = document.getElementById('demo'); // <p>  <p>
+//     x.style.backgroundColor = "red"
+// }
+
+
+let z = document.querySelector('.box');  //<div>  <div>
+
+
+function changeColor1(){
+        z.style.backgroundColor = "black"
+}
+
+function changeColor2(){
+    z.style.backgroundColor = "blue"
+}
+
+function changeColor3(){
+    z.style.backgroundColor = "yellow"
+}
+
+
+
+
+// example of external event --> 
+let tag = document.querySelector('h1');
+console.log(tag)
+
+tag.addEventListener('click' , ()=>{
+    tag.style.backgroundColor="yellow";
+} )
+tag.addEventListener('mouseenter' , ()=>{
+    tag.style.backgroundColor="red";
+} )
+tag.addEventListener('mouseout' , ()=>{
+    tag.style.backgroundColor="orange";
+} )
+
+
+
+
+
+    </script>
+</body>
+</html>
