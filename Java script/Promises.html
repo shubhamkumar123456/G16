@@ -71,7 +71,7 @@
         // x.catch((ans)=>console.log(ans))
         
 
-        // Method 2 --> async/ await
+        // Method 2 --> async/ await --> is also used to handle Asynchronous task like promises in more clear way.
 
         let bodyTag = document.querySelector('body') //<body> <body>
         async function xyz(){
@@ -83,19 +83,18 @@
             for(let i = 0; i<data.products.length; i++){
                 // console.log(data.products[i])
                 console.log(data.products[i].title)
-
                 let para = document.createElement('p');// <p> <p>
                     let imageTag = document.createElement('img')
                     imageTag.src = data.products[i].thumbnail
                     para.innerHTML = data.products[i].title;
-
                     bodyTag.append(imageTag, para)
-
-
             }
 
         } 
         xyz()
+
+
+        // 'https://dummyjson.com/recipes'
 
     </script>
 </body>
