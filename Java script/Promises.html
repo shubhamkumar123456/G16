@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        // console.log("i am one")
+        // console.log("i am two")
+        // console.log("i am three")
+
+        // console.log("one");
+
+        // setTimeout(() => {
+        //     console.log("two")
+        // }, 4000);
+
+        // setTimeout(()=>{
+        //     console.log("three")
+        // },2000)
+
+        // console.log("four")
+
+
+
+
+        // Promises  --> are used to handle Asynchrounous task . it take a callback function with two arguments resolve and reject. promises have three states pending ,  fullfilled , and rejected.  if promise is fullfilled you can get your answer in (.then) part if promise is rejected you can get your output in .catch part
+        
+        // Syntax -->  
+        // let x = new Promise((resolve, reject) => {
+        //     //code or logic
+        //     //resolve or reject
+        // })
+
+        // find the sum of array using promises if array has more than 3 elements
+
+        // let arr = [10, 20];
+
+        // let x = new Promise((resolve, reject) => {
+        //         let length = arr.length ; //4
+        //         let sum = 0;
+
+        //         if(length > 3){
+        //             for(let i=0; i<arr.length; i++){
+        //                 sum = sum+arr[i]
+        //             }
+        //             resolve(sum);
+        //         }
+        //         else{
+        //             reject("promises is rejected , length is less than 3")
+        //         }
+        // })
+
+        // x.then((ans)=>console.log(ans))
+        // x.catch((ans)=>console.log(ans))
+
+
+
+        //  api --> https://dummyjson.com/products
+        //  fetch --> used to send http network request to server and return promises so you can get output in .then or .catch part 
+        // let x = fetch('https://dummyjson.com/products')
+
+        // x.then((ans) =>ans.json())
+        // .then((ans)=>console.log(ans.products))
+    
+        // x.catch((ans)=>console.log(ans))
+        
+
+        // Method 2 --> async/ await
+
+        let bodyTag = document.querySelector('body') //<body> <body>
+        async function xyz(){
+            let x =await fetch('https://dummyjson.com/products')
+            let data = await x.json();
+            console.log(data)  //{products:[{},{}], skip:5, limit:0}
+            console.log(data.products)  //[{}, {} , {} , {}]
+
+            for(let i = 0; i<data.products.length; i++){
+                // console.log(data.products[i])
+                console.log(data.products[i].title)
+
+                let para = document.createElement('p');// <p> <p>
+                    let imageTag = document.createElement('img')
+                    imageTag.src = data.products[i].thumbnail
+                    para.innerHTML = data.products[i].title;
+
+                    bodyTag.append(imageTag, para)
+
+
+            }
+
+        } 
+        xyz()
+
+    </script>
+</body>
+</html>
