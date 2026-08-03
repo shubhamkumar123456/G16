@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Demo from './Demo'
 import Counter from './Counter'
+import Rendering from './Rendering'
 
 
 
@@ -13,10 +14,8 @@ function App() {
 
   return (
     <div>
-      {/* <h1>THis is my first page</h1> */}
-      {/* <Demo/> */}
-
-      <Counter/>
+      {/* <Counter/> */}
+      <Rendering/>
     </div>
   )
 }

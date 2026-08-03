@@ -1,28 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Counter = () => {
 
-    // Script-->write here any variable or function decleration
-        let x = "hello"
-        let y = 0;
+    // let x = 10; // normal variable
+    // const [state , updateFunction] = useState(value)
 
-        let count = 0
+    const [x, setX] = useState(10) // 11 //12
+    let name = "john"
 
-        function handleIncrement(){
-            console.log("i am running")
-        }
+    function handleIncrement(){
+      // x++;
+      // console.log(x)
+      // setX("hello")
+      setX(x+1)
+    }
+
+
+    function handleDecrement(){
+      setX(x-1)
+    }
 
   return (
     <div>
-      <h1>This is counter page</h1>
-      <p>0</p>
-      <p>{"x"}</p>
-      <p>x</p>
+      <h1>This is COunter page</h1>
       <p>{x}</p>
-      <h3>{y}</h3>
-
-      <h1>Count : {count}</h1>
-      <button onClick={handleIncrement}>Increase</button>
+      <p>{name}</p>
+      <p>Count : {x}</p>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
+      <button onClick={()=>setX(10)}>Reset</button>
     </div>
   )
 }
