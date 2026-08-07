@@ -9,3 +9,5 @@
 // Hooks --> hooks are functions . with the help of hooks you can define State in your react application (in functional component). example useState Hook, useEffect Hook, useReducer Hook, etc;
 
 // UseState Hook --> 
+
+// UseRef Hook --> with the help of useRef hook you can copy the address of any react element(tag). without re-rendering of component. it directly manipulate the DOM.
