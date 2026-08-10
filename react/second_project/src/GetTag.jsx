@@ -34,9 +34,7 @@ const GetTag = () => {
         <img ref={y} style={{height:"300px", width:"300px"}} src="https://img.magnific.com/free-photo/closeup-shot-beautiful-butterfly-with-interesting-textures-orange-petaled-flower_181624-7640.jpg?semt=ais_test_b&w=740&q=80" alt="" />
 
         <p ref={paraRef}>This is para</p>
-
         <button onClick={handleContent}>Change Content</button>
-
     </div>
   )
 }
