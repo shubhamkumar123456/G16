@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import ShowContent from './pages/ShowContent'
 
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import TaskApp from './pages/TaskApp'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
                   <Route path="/xyz"   element ={<About/>}/>
                   <Route path="/abc"   element ={<Contact/>}/>
                   <Route path="/content"   element ={<ShowContent/>}/>
+                  <Route path="/task" element={<TaskApp/>}/>
             </Routes>
         </BrowserRouter>
     </div>
