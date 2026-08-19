@@ -5,6 +5,7 @@ import GetTag from './GetTag'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import ShowContent from './pages/ShowContent'
 
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 
@@ -21,6 +22,7 @@ const App = () => {
                   <Route path="/"   element ={<Home/>}/>
                   <Route path="/xyz"   element ={<About/>}/>
                   <Route path="/abc"   element ={<Contact/>}/>
+                  <Route path="/content"   element ={<ShowContent/>}/>
             </Routes>
         </BrowserRouter>
     </div>
