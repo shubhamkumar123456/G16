@@ -14,7 +14,8 @@ const Home = () => {
       {id:3 , expenseName:"parking", price:300, date:"22-08-26"},
       {id:4 , expenseName:"petrol", price:200, date:"23-08-26"},
       {id:5 , expenseName:"movies", price:1000, date:"21-08-26"},
-    ])
+    ]);
+
 
     // let arr = [
     //   {id:1 , expenseName:"zoo", price:300, date:"24-08-26"},
@@ -27,19 +28,27 @@ const Home = () => {
     function handleAddExpense(e){
       e.preventDefault();
         console.log("running")
+
         let obj = {
           id:arr.length+1,
           expenseName : x.current.value,
           price: y.current.value,
           date:z.current.value
         }
-        console.log(obj)
-        arr.push(obj);
-        console.log(arr);
-
+        setArr([...arr,obj]);
     }
 
     // Class test on friday
+
+    function handleDelete(obj, i){
+        console.log(obj)
+        console.log(i)
+
+        let copyArr = [...arr] // [{}, {}, {}, {}, {}];
+        copyArr.splice(i , 1) //[{ } , {} , {} , {}]
+        setArr(copyArr);
+    }
+
   return (
     <div>
       <h1>This is Expense App</h1>
@@ -68,7 +77,7 @@ const Home = () => {
                 <td>{val.expenseName}</td>
                 <td>{val.price}</td>
                 <td>{val.date}</td>
-                <td><button>delete</button></td>
+                <td><button onClick={()=>handleDelete(val,i)}>delete</button></td>
               </tr>
             })
            }
