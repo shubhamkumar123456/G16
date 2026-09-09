@@ -2,6 +2,7 @@ import React from 'react'
 import './App.css'
 import Home from './Home'
 import About from './About';
+import EffectHookPractice from './EffectHookPractice';
 
 const App = () => {
   let x = 10;
@@ -10,9 +11,12 @@ const App = () => {
   return (
     <div style={{backgroundColor:"black", color:"white", padding:"20px"}}>
       <h1>This is App component</h1>
-      <Home a={x} b={y}/>
+      {/* <Home a={x} b={y}/> */}
       {/* <Home a={88} b={"jack"}/> */}
-      <About/>
+      {/* <About/> */}
+
+      <EffectHookPractice/>
+
     </div>
   )
 }

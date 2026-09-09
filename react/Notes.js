@@ -8,6 +8,9 @@
 
 // Hooks --> hooks are functions . with the help of hooks you can define State in your react application (in functional component). example useState Hook, useEffect Hook, useReducer Hook, etc;
 
-// UseState Hook --> 
+// UseState Hook --> used to store value and can be used to re-render of component . it takes a array of two arguments ,a variable and a function. variable is used to store the value and function is used to update the value of variable. whenever update function will run react re-renders the whole component 
+
+// useEffect Hook --> is used to run side effect such as updating the DOM element ,fetching api etc. it takes a two arguments, a callback function and a array of dependency. if the array of dependency is blank , code inside useEffect will run only one time. useEffect always runs after the first render of component
 
 // UseRef Hook --> with the help of useRef hook you can copy the address of any react element(tag). without re-rendering of component. it directly manipulate the DOM.
+
