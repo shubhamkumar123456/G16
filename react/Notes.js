@@ -14,3 +14,4 @@
 
 // UseRef Hook --> with the help of useRef hook you can copy the address of any react element(tag). without re-rendering of component. it directly manipulate the DOM.
 
+// props --> with the help of props you can pass the data from parent component to child component. props are read only .you can not change the vaalue of props.
