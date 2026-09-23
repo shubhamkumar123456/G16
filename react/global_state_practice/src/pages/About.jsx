@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext } from 'react'
 import UserContext from '../context/UserContext'
+import ThemeState from '../context/ThemeState';
 
 const About = () => {
 
@@ -8,9 +9,9 @@ const About = () => {
 
     console.log(ctx)
   return (
-    <div>
-      <h1>This is About Page</h1>
-    </div>
+    <ThemeState>
+      <h1 style={{color:"white"}}>This is About Page</h1>
+    </ThemeState>
   )
 }
 
