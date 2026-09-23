@@ -15,3 +15,28 @@
 // UseRef Hook --> with the help of useRef hook you can copy the address of any react element(tag). without re-rendering of component. it directly manipulate the DOM.
 
 // props --> with the help of props you can pass the data from parent component to child component. props are read only .you can not change the vaalue of props.
+
+
+// contextApi --> with the help of context api you can create global state in  your react application. data will be available for all component(parent or child). with the help of context api you can avoid props drilling.
+
+// Steps for creating context -->
+
+//1) create a folder context and inside folder create a contextFile (Example: UserContext.jsx) and use createContext to open a global context or create a global store
+
+// 2) create a state file to manage the data inside context store
+    //a) create component rafce
+    //b) import context file here  (import UserContext from './UserContext';)
+    //c) make a provider of this context file and pass value attribute 
+            // example  <UserContext.Provider value={{x, y}}>
+            //                  {props.children}
+            // </UserContext.Provider>
+
+//3) wrap your app with UserState file inside main.jsx 
+        // example -->     <UserState>
+        //                      <App/>
+                        // </UserState>
+
+
+// 4) now you can see this statefile data on any page (app, home about) using a hook useContext(yourContextName)
+    // example in Home page --> let ctx = useContext(UserContext)
+                                // console.log(ctx)  // {x, y}  show the same data that are passed through state file
