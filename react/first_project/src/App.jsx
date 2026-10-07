@@ -6,6 +6,8 @@ import './App.css'
 import Demo from './Demo'
 import Counter from './Counter'
 import Rendering from './Rendering'
+import ReducerPractice from './ReducerPractice'
+import Reducer2Comp from './Reducer2Comp'
 
 
 
@@ -15,7 +17,9 @@ function App() {
   return (
     <div>
       {/* <Counter/> */}
-      <Rendering/>
+      {/* <Rendering/> */}
+      {/* <ReducerPractice/> */}
+      <Reducer2Comp/>
     </div>
   )
 }
