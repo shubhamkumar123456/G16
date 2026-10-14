@@ -7,6 +7,7 @@ import SignupPage from './pages/SignupPage'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ProtectedRoute from './redux/ProtectedRoute'
+import RegisterPage from './pages/RegisterPage'
 
 const App = () => {
   let loginValue = false;
@@ -29,7 +30,7 @@ const App = () => {
 
                 <Route path='/xyz' element={<Contact/>}/>
                 <Route path='/login'  element={<Login/>}/>
-                <Route path='/register' element={<SignupPage/>}/>
+                <Route path='/register' element={<RegisterPage/>}/>
           </Routes>
       </BrowserRouter>
     </div>
