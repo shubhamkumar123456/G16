@@ -35,7 +35,7 @@ export default function RegisterPage() {
 
         <label htmlFor="">Password
       <input className="border" {...register("password", { required:" password is required",pattern:{
-        value:/^(?=.[a-zA-z])(?=.[0-9])(?=.[@#$%^&!*])/,
+        value:/^(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&!*]).*$/,
         message:"invalid password"
       },
       minLength:{value:6,message:"must be 6 character"}
