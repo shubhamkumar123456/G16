@@ -8,6 +8,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
 import ProtectedRoute from './redux/ProtectedRoute'
 import RegisterPage from './pages/RegisterPage'
+import Home1 from './pages/Home1'
 
 const App = () => {
   let loginValue = false;
@@ -21,7 +22,7 @@ const App = () => {
         <Navbar/>
           <Routes>
                 <Route path='/' element={<ProtectedRoute>
-                  <Home/>
+                  <Home1/>
                 </ProtectedRoute>}/>
                 
                 <Route path='/sorts' element={<ProtectedRoute>
