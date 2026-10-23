@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import ProtectedRoute from './redux/ProtectedRoute'
 import RegisterPage from './pages/RegisterPage'
 import Home1 from './pages/Home1'
+ import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
   let loginValue = false;
@@ -31,8 +32,9 @@ const App = () => {
 
                 <Route path='/xyz' element={<Contact/>}/>
                 <Route path='/login'  element={<Login/>}/>
-                <Route path='/register' element={<RegisterPage/>}/>
+                <Route path='/register' element={<SignupPage/>}/>
           </Routes>
+          <ToastContainer/>
       </BrowserRouter>
     </div>
   )

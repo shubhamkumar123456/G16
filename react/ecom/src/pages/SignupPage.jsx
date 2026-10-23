@@ -1,11 +1,13 @@
 import React, { useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const SignupPage = () => {
 
   let nameRef = useRef() //{current:undefined}  {current:<input/>}
   let emailRef = useRef()
   let passwordRef = useRef()
+  let navigate = useNavigate()
 
   let arr = JSON.parse(localStorage.getItem('ecomSignup')) ||  [];
   console.log(arr)
@@ -18,10 +20,19 @@ const SignupPage = () => {
         password:passwordRef.current.value
       }
 
-      console.log(obj)
-      arr.push(obj)
-      localStorage.setItem('ecomSignup', JSON.stringify(arr))
-      console.log(arr)
+      console.log(obj);
+      let find = arr.find((ele)=>ele.email === obj.email);
+      if(find){
+            return toast.error("user already registered",{position:"top-center",theme:"dark"})
+      }
+      else{
+           arr.push(obj)
+        localStorage.setItem('ecomSignup', JSON.stringify(arr))
+        console.log(arr)
+        navigate('/login');
+        toast.success("user registered successfully")
+      }
+     
   }
 
   return (

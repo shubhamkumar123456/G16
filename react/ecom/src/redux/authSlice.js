@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit'
 export const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    isLoggedIn : true,
+    isLoggedIn : false,
     user:{}
   },
   reducers: {
-    increment: state => {
-      state.value += 1
+    loginUser: (state,action) => {
+      state.isLoggedIn = true
     },
     decrement: state => {
       state.value -= 1
@@ -19,6 +19,6 @@ export const authSlice = createSlice({
   }
 })
 
-export const { increment, decrement, incrementByAmount } = authSlice.actions
+export const { loginUser, decrement, incrementByAmount } = authSlice.actions
 
 export default authSlice.reducer
