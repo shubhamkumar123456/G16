@@ -40,3 +40,11 @@
 // 4) now you can see this statefile data on any page (app, home about) using a hook useContext(yourContextName)
     // example in Home page --> let ctx = useContext(UserContext)
                                 // console.log(ctx)  // {x, y}  show the same data that are passed through state file
+
+// 5) Redux -->
+
+//6) React memo --> by default when a parent component re-renders, all of its child component re-render too. even if the props passed to the child have not changed. wrapping a component in react memo tells react to skip re-rendering unless its props are different.  ( react memo caches an entire component so it only rerender if its props change)
+
+// useMemo --> 
+
+// Lazy Loading -->
